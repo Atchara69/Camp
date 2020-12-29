@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateOrdersItems extends Migration
+class CreateOrderItems extends Migration
 {
     /**
      * Run the migrations.
@@ -16,9 +16,9 @@ class CreateOrdersItems extends Migration
         Schema::create('orderitems', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('item_id');
-            $table->integer('order_id');//รหัสใบสั่งซื้อ
+            $table->integer('order_id'); //รหัสใบสั่งซื้อ
             $table->text('item_name'); //ชื่อสินค้าในใบสั่งซื้อ
-            $table->decimal('item_price',8,2);//ราคาสินค้า
+            $table->decimal('item_price', 8, 2); //ราคาสินค้า
             $table->timestamps();
         });
     }

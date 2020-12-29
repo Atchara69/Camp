@@ -1,2 +1,2 @@
 # Camp
- camping
+ Camping

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddColumUsername extends Migration
+class AddColumnToPaymentTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddColumUsername extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('username')->after('name')->unique();
+        Schema::table('payments', function (Blueprint $table) {
+            $table->string('status')->after('payer_id');
         });
     }
 
@@ -25,6 +25,8 @@ class AddColumUsername extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::table('payments', function (Blueprint $table) {
+            //
+        });
     }
 }

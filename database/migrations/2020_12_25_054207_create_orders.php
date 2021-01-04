@@ -14,7 +14,7 @@ class CreateOrders extends Migration
     public function up()
     {
         Schema::create('orders', function (Blueprint $table) {
-            $table->bigIncrements('order_id');
+            $table->bigIncrements('id');
             $table->date("date");
             $table->decimal("price",8,2);
             $table->text("status");
@@ -26,7 +26,8 @@ class CreateOrders extends Migration
             $table->text('phone');
             $table->text('zip');
             $table->text('email');
-            $table->integer('user_id'); //user
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

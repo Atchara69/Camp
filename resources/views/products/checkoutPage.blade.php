@@ -16,8 +16,8 @@
                             <div class="form-one">
                                 <form action="/products/createOrder" method="post" class="form-group">
                             {{csrf_field()}}
-                                    <input type="text" name="email" placeholder="Email*" required>
-                                    <input type="text" name="fname" placeholder="First Name *" required>
+                                    <input type="text" name="email" placeholder="Email*" required value="{{ Auth::user()->email }}">
+                                    <input type="text" name="fname" placeholder="First Name *" required value="{{ Auth::user()->name }}">
                                     <input type="text" name="lname" placeholder="Last Name *"  required>
                                     <input type="text" name="address" placeholder="Address 1 *" required>
                                     <input type="text" name="zip" placeholder="Zip / Postal Code *" required>

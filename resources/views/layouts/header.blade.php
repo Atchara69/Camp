@@ -46,7 +46,7 @@
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
                                 @if (Auth::check())
-                                    <li><a href="/home"><i class="fa fa-user"></i>My Account555555</a></li>
+                                    <li><a href="/home"><i class="fa fa-user"></i>My Account</a></li>
                                     <li><a href="/products/cart">
                                         @if (isset($cartItems))
                                             <span class="badge" style="background:red">{{$cartItems->totalQuantity}}</span>

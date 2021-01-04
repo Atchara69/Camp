@@ -155,21 +155,19 @@ class ProductController extends Controller
         //insert data
         $create_Order=DB::table('orders')->insert($newOrder);
         $order_id=DB::getPDO()->lastInsertId();
-
+        
         foreach ($cart->items as $item){
-            $item_id=$item['data']['id'];
-            $item_name=$item['data']['name'];
+            $product_id=$item['data']['id'];
+            $product_name=$item['data']['name'];
             $item_price=$item['data']['price'];
             $item_amount=$item['quantity'];
 
 
             $newOrderItem=array(
-                "item_id"=>$item_id,
+                "product_id"=>$product_id,
                 "order_id"=>$order_id,
-                "item_name"=>$item_name,
                 "item_price"=>$item_price,
                 "item_amount"=>$item_amount
-
             );
             $create_OrderItem=DB::table("orderitems")->insert($newOrderItem);
         }

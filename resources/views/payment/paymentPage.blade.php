@@ -5,7 +5,7 @@
         <div class="breadcrumbs">
             <ol class="breadcrumb">
                 <li><a href="/">Home</a></li>
-                <li class="active">Shopping Cart</li>
+                <li class="active">Shopping Carts</li>
             </ol>
         </div>
             <div class="shopper-informations">

@@ -8,6 +8,9 @@ use App\Product;
 use App\Cart;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+use Response;
+
 class ProductController extends Controller
 {
 
@@ -33,6 +36,7 @@ class ProductController extends Controller
     }
 
     public function addProductToCart(Request $request,$id){
+
         $product=Product::find($id);
         $prevCart=$request->session()->get('cart');
         $cart=new Cart($prevCart);
@@ -155,7 +159,7 @@ class ProductController extends Controller
         //insert data
         $create_Order=DB::table('orders')->insert($newOrder);
         $order_id=DB::getPDO()->lastInsertId();
-        
+
         foreach ($cart->items as $item){
             $product_id=$item['data']['id'];
             $product_name=$item['data']['name'];

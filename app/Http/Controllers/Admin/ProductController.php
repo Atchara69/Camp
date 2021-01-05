@@ -59,13 +59,22 @@ class ProductController extends Controller
         ]);
 
         if($request->hasFile("image")){
-            $product=Product::find($id);
-            $exists=Storage::disk('local')->exists("public/product_image/".$product->image); //เจอไฟล์ภาพชื่อเกมือนกัน
-            if($exists){
-                Storage::delete("public/product_image/".$product->image);
 
-            }
-            $request->image->storeAs("public/product_image/",$product->image);
+
+            $imageName = time().'.'.$request->image->extension();//rename
+
+            $request->image->move(public_path('images/product_image'), $imageName);
+
+            $product=Product::find($id);
+            $product->image = $imageName;
+            $product->save();
+
+            // $exists=Storage::disk('local')->exists("public/product_image/".$product->image); //เจอไฟล์ภาพชื่อเกมือนกัน
+            // if($exists){
+            //     // Storage::delete("public/product_image/".$product->image);
+            //     unlink(public_path('images/product_image/'.$product->image));
+            // }
+            // $request->image->storeAs("public/product_image/",$product->image);
             return redirect('/admin/dashboard');
 
         }

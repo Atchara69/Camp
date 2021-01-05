@@ -21,7 +21,7 @@ class ProductController extends Controller
     public function findCategory($id){
         $category=Category::find($id);
         return view("products.showCategory")
-        ->with("categories",Category::all()->sortBy('name'))
+        ->with("categories",Category::all()->sortBy('name')) 
         ->with("products",$category->products()->paginate(3))
         ->with('feature',$category->name);
     }
@@ -155,7 +155,7 @@ class ProductController extends Controller
         //insert data
         $create_Order=DB::table('orders')->insert($newOrder);
         $order_id=DB::getPDO()->lastInsertId();
-        
+
         foreach ($cart->items as $item){
             $product_id=$item['data']['id'];
             $product_name=$item['data']['name'];

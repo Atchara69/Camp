@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'admin',
             'email' => 'admin@gmail.com',
             'password' => Hash::make('12345678'),
-            'username' => 'admin',
+            'username' => 'adminn',
             'isAdmin' => '1',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),

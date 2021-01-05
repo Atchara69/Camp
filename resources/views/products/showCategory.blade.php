@@ -19,8 +19,10 @@
                     <div class="price-range"><!--price-range-->
                         <h2>Price Range</h2>
                         <div class="well text-center">
-                             <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" ><br />
-                             <b class="pull-left">$ 0</b> <b class="pull-right">$ 600</b>
+                            <form class="" action="/products/priceRange" method="get">
+                            <input type="text" class="span2" value="" data-slider-min="500" data-slider-max="10000" data-slider-step="5" data-slider-value="[500,10000]" id="sl2" name="price"><br />
+                            <b class="pull-left">500</b> <b class="pull-right">10,000</b>
+                             <input type="submit" name="" value="ค้นหา" class="btn btn-primary">
                         </div>
                     </div><!--/price-range-->
                 </div>

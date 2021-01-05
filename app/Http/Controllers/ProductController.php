@@ -8,6 +8,9 @@ use App\Product;
 use App\Cart;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+use Response;
+
 class ProductController extends Controller
 {
 
@@ -21,7 +24,7 @@ class ProductController extends Controller
     public function findCategory($id){
         $category=Category::find($id);
         return view("products.showCategory")
-        ->with("categories",Category::all()->sortBy('name')) 
+        ->with("categories",Category::all()->sortBy('name'))
         ->with("products",$category->products()->paginate(3))
         ->with('feature',$category->name);
     }
@@ -33,6 +36,7 @@ class ProductController extends Controller
     }
 
     public function addProductToCart(Request $request,$id){
+
         $product=Product::find($id);
         $prevCart=$request->session()->get('cart');
         $cart=new Cart($prevCart);

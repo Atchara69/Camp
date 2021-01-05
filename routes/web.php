@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\Auth;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/products',"ProductController@index");
 Route::get('/products/category/{id}','ProductController@findCategory');
 Route::get('/products/details/{id}','ProductController@details');
@@ -58,11 +57,11 @@ Route::get('admin/users','Admin\UserController@showUsers');
 
 
 });
+    Route::get('/products/addToCart/{id}','ProductController@addProductToCart');
 
 //FrontEnd
-Route::middleware(['auth','verifyIsAdmin'])->group(function(){
+// Route::middleware(['auth','verifyIsAdmin'])->group(function(){
     // Add to Cart
-    Route::get('/products/addToCart/{id}','ProductController@addProductToCart');
     Route::get('/products/cart','ProductController@showCart');
     Route::get('/products/cart/deleteFromCart/{id}','ProductController@deleteFromCart');
     Route::get('/products/cart/incrementCart/{id}','ProductController@incrementCart');
@@ -79,8 +78,10 @@ Route::middleware(['auth','verifyIsAdmin'])->group(function(){
 
 
 
-});
+// });
 
 Route::get('/products/priceRange','ProductController@searchProductPrice');
 Route::get('/products/search','ProductController@searchProduct');
+
+
 

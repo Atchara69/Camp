@@ -24,7 +24,7 @@
         <div class="form-group">
             <label for="image">Image</label>
             <input type="file" class="form-control"  name="image" id="image">
-            
+
         </div>
         <div class="form-group">
             <label for="type">Category</label>
@@ -36,7 +36,7 @@
         </div>
         <div class="form-group">
             <label for="type">Price</label>
-            <input type="text" class="form-control" name="price" id="price" placeholder="Price">
+            <input type="text" class="form-control" name="price" id="price" placeholder="Price" required>
         </div>
         <button type="submit" name="submit" class="btn btn-success">Submit</button>
     </form>

@@ -33,7 +33,7 @@
                         <div class="product-image-wrapper">
                             <div class="single-products">
                                     <div class="productinfo text-center">
-                                        <img src="{{asset('storage')}}/product_image/{{$product->image}}" alt="" width="200px" height="170px"/>
+                                        <img src="{{asset('images/product_image/'.$product->image)}}" alt="" width="200px" height="170px"/>
                                         <h2>{{number_format($product->price)}}</h2>
                                         <p>{{$product->name}}</p>
                                         <a href="/products/addToCart/{{$product->id}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>

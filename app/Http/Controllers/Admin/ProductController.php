@@ -96,13 +96,21 @@ class ProductController extends Controller
             'image' => 'required|file|image|mimes:jpeg,png,jpg|max:5000'
         ]);
         // convert image name
-        $stringImageReFormat = base64_encode('_' . time());
-        $ext = $request->file('image')->getClientOriginalExtension();
-        $imageName = $stringImageReFormat . "." . $ext;
-        $imageEncoded = File::get($request->image);
+        // $stringImageReFormat = base64_encode('_' . time());
+        // $ext = $request->file('image')->getClientOriginalExtension();
+        // $imageName = $stringImageReFormat . "." . $ext;
+        // $imageEncoded = File::get($request->image);
+
+        $imageName = '';
+        if ($request->hasFile("image")) {
+
+            $imageName = time() . '.' . $request->image->extension(); //rename
+
+            $request->image->move(public_path('images/product_image'), $imageName);
+        }
 
         // upload & insert
-        Storage::disk('local')->put('public/product_image/' . $imageName, $imageEncoded);
+        // Storage::disk('local')->put('public/product_image/' . $imageName, $imageEncoded);
 
         //Insert
         $product = new Product;

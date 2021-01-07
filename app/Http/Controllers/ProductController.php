@@ -25,7 +25,7 @@ class ProductController extends Controller
         $category=Category::find($id);
         return view("products.showCategory")
         ->with("categories",Category::all()->sortBy('name'))
-        ->with("products",$category->products()->paginate(3))
+        ->with("products",$category->products()->paginate(6))
         ->with('feature',$category->name);
     }
 
@@ -115,7 +115,7 @@ class ProductController extends Controller
 
     public function searchProduct(Request $request){
         $name=$request->search;
-        $products=Product::where('name',"LIKE","%{$name}%")->paginate(3);
+        $products=Product::where('name',"LIKE","%{$name}%")->paginate(6);
         return view("products.searchProduct")
         ->with("products",$products)
         ->with("categories",Category::all()->sortBy('name'));

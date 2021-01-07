@@ -34,7 +34,7 @@
                 <div class="product-details"><!--product-details-->
                   <div class="col-sm-5">
                     <div class="view-product">
-                      <img src="{{asset('storage')}}/product_image/{{$product->image}}" alt="" />
+                    <img src="{{asset('images/product_image/'.$product->image)}}" alt="" />
                     </div>
                   </div>
                   <div class="col-sm-7">

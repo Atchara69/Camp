@@ -38,7 +38,7 @@
                                         <img src="{{asset('storage')}}/product_image/{{$product->image}}" alt="" width="200px" height="170px"/>
                                         <h2>{{number_format($product->price)}}</h2>
                                         <p>{{$product->name}}</p>
-                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                        <a href="/products/addToCart/{{$product->id}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </div>
                                     {{-- <div class="product-overlay">
                                         <div class="overlay-content">

@@ -12,7 +12,7 @@
 <div class="table-responsive">
     <h2>Current Image</h2>
     <div>
-        <img src="{{asset('storage')}}/product_image/{{$product->image}}" alt="" width="150px" height="100px" >
+        <img src="{{asset('images/product_image/'.$product->image)}}" alt="" width="150px" height="100px" >
     </div>
     <form action="/admin/updateProductImage/{{$product->id}}" method="post" enctype="multipart/form-data">
         {{csrf_field()}}

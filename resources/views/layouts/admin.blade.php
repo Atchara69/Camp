@@ -10,6 +10,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link href="{{asset('css/sidebar.css')}}" rel="stylesheet">
+    {{-- image  Icon --}}
+    <link rel="icon" href="{{asset('images/imges-camping/logo.png')}}" type="image/png"> 
 </head>
 <body>
   <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
@@ -18,7 +20,7 @@
       <a class="p-2 text-dark" href="/products">Home</a>
       <a class="p-2 text-dark" href="/admin/dashboard">Dashboard</a>
       <a class="p-2 text-dark" href="/home">Profile</a>
-      <a class="p-2 text-dark" href="#">Help</a>
+      <a class="p-2 text-dark" href="#">Help</a>            
     </nav>
   </div>
   <div class="d-flex" id="wrapper">

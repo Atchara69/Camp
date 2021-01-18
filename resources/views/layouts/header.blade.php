@@ -13,6 +13,8 @@
     <link href="{{asset('css/animate.css')}}" rel="stylesheet">
 	  <link href="{{asset('css/main.css')}}" rel="stylesheet">
 	  <link href="{{asset('css/responsive.css')}}" rel="stylesheet">
+		{{-- Icon หน้า ShowProduct --}}
+	  <link rel="icon" href="{{asset('images/imges-camping/logo.png')}}" type="image/png"> 
 </head><!--/head-->
 <body>
 	<header id="header"><!--header-->
@@ -39,7 +41,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="/products"><img src="{{asset('images/home/logo.png')}}" alt="" /></a>
+							<a href="/products"><img src="{{asset('images/imges-camping/show-logo.png')}}" alt="" /></a>
 						</div>
 					</div>
 					<div class="col-sm-8">
@@ -120,36 +122,41 @@
 						<ol class="carousel-indicators">
 							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
 							<li data-target="#slider-carousel" data-slide-to="1"></li>
-							<li data-target="#slider-carousel" data-slide-to="2"></li>
+							{{-- <li data-target="#slider-carousel" data-slide-to="2"></li> --}}
 						</ol>
 
 						<div class="carousel-inner">
 							<div class="item active">
 								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
-									<h2>แพลตฟอร์มช็อปปิ้งออนไลน์</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-									<button type="button" class="btn btn-default get">Get it now</button>
+									<img src="{{asset('images/home/koko.jpg')}}" class="girl img-responsive" alt="" />
+									{{-- <h1><span>CAMP</span>-SHOP</h1>
+									<h2>เราจำหน่ายเป้แบคแพค
+									เต็นท์ อุปกรณ์แคมป์ปิ้งเดินป่าและอุปกรณ์เดินทางท่องเที่ยวครบ</h2>
+
+									<center><p><h2>" อย่าเสียดายเงิน <br>
+										ถ้านั้นคือความสุขของคุณ อ่ะฮิๆๆ " </p></h2></center> --}}
+									{{-- <button type="button" class="btn btn-default get">Get it now</button> --}}
 								</div>
 								<div class="col-sm-6">
-									<img src="{{asset('images/home/girl1.jpg')}}" class="girl img-responsive" alt="" />
-									<img src="{{asset('images/home/pricing.png')}}"  class="pricing" alt="" />
+									<img src="{{asset('images/home/showproduct.jpg')}}" class="girl img-responsive" alt="" />
+									{{-- <img src="{{asset('images/home/pricing.png')}}"  class="pricing" alt="" /> --}}
 								</div>
 							</div>
 							<div class="item">
 								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
+									{{-- <h1><span>E</span>-SHOPPER</h1>
 									<h2>บริการ ทุกระดับประทับใจ</h2>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-									<button type="button" class="btn btn-default get">Get it now</button>
+									<button type="button" class="btn btn-default get">Get it now</button> --}}
+									<img src="{{asset('images/home/off50.jpg')}}" class="girl img-responsive" alt="" />
 								</div>
 								<div class="col-sm-6">
-									<img src="{{asset('images/home/girl2.jpg')}}" class="girl img-responsive" alt="" />
-									<img src="{{asset('images/home/pricing.png')}}"  class="pricing" alt="" />
+									<img src="{{asset('images/home/totalproduct.jpg')}}" class="girl img-responsive" alt="" />
+									{{-- <img src="{{asset('images/home/pricing.png')}}"  class="pricing" alt="" /> --}}
 								</div>
 							</div>
 
-							<div class="item">
+							{{-- <div class="item">
 								<div class="col-sm-6">
 									<h1><span>E</span>-SHOPPER</h1>
 									<h2>รับประกันสินค้านาน 3 ปี</h2>
@@ -160,7 +167,7 @@
 									<img src="{{asset('images/home/girl3.jpg')}}" class="girl img-responsive" alt="" />
 									<img src="{{asset('images/home/pricing.png')}}" class="pricing" alt="" />
 								</div>
-							</div>
+							</div> --}}
 
 						</div>
 

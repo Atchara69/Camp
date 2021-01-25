@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('body')
-@if($orderitems->count()>0)
+@if($order->count()>0)
 <div class="table-responsive">
     <h2>Order Details </h2>
     <table class="table">
@@ -14,10 +14,10 @@
           </tr>
         </thead>
         <tbody>
-            @foreach ($orderitems as $orderitem)
+            @foreach ($order->order_detail as $orderitem)
         <tr>
-        <th scope="row">{{$orderitem->item_id}}</th>
-        <th scope="row">{{$orderitem->item_name}}</th>
+        <th scope="row">{{$orderitem->product->id}}</th>
+        <th scope="row">{{$orderitem->product->name}}</th>
         <th scope="row">{{$orderitem->item_price}}</th>
         <th scope="row">{{$orderitem->item_amount}}</th>
 

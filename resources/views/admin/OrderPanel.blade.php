@@ -18,23 +18,24 @@
         <tbody>
             @foreach ($orders as $order)
         <tr>
-        <th scope="row">{{$order->order_id}}</th>
+        <th scope="row">{{$order->id}}</th>
         <th scope="row">{{$order->date}}</th>
         <th scope="row">{{$order->del_date}}</th>
         <th scope="row">{{number_format($order->price)}}</th>
         <th scope="row">
             <span class="
-            @if($order->status=='Noot Paid')
-                    badge badge-danger
-                    @else
+            @if($order->status=='Not Paid')
                     badge badge-success
+                    @else
+                    badge badge-danger
+                    
                     @endif
 
             ">{{$order->status}}</span>
         </th>
         <th scope="row">{{$order->user_id}}</th>
             <td>
-                 <a href="/admin/orders/detail/{{$order->order_id}}" onclick="" class="btn btn-info">Details</a>
+                 <a href="/admin/orders/detail/{{$order->id}}" onclick="" class="btn btn-info">Details</a>
             </td>
           </tr>
             @endforeach

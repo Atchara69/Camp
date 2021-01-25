@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Order;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -14,10 +15,7 @@ class OrderController extends Controller
         return view('admin.OrderPanel',["orders"=>$orders]);
     }
     public function showOrderDetail($id){
-        $orderitems=DB::table('orders')
-        ->join('orderitems','orders.order_id','=','orderitems.order_id')
-        ->where('orders.order_id',$id)
-        ->get();
-        return view('admin.orderDetails',["orderitems"=>$orderitems]);
+        $order=Order::find($id);
+        return view('admin.orderDetails',["order"=>$order]);
   }
 }

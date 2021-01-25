@@ -127,10 +127,11 @@ class ProductController extends Controller
     public function delete($id)
     {
         $product = Product::find($id);
-        $exists = Storage::disk('local')->exists("public/product_image/" . $product->image); //เจอไฟล์ภาพชื่อเกมือนกัน
-        if ($exists) {
-            Storage::delete("public/product_image/" . $product->image);
-        }
+        unlink(public_path('images/product_image/'.$product->image));
+        // $exists = Storage::disk('local')->exists("public/product_image/" . $product->image); //เจอไฟล์ภาพชื่อเกมือนกัน
+        // if ($exists) {
+        //     Storage::delete("public/product_image/" . $product->image);
+        // }
         Product::destroy($id);
         session()->flash("success", "ลบข้อมูลเรียบร้อยแล้ว!");
         return redirect('admin/dashboard');

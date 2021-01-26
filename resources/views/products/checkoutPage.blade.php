@@ -21,7 +21,7 @@
                                     <input type="text" name="lname" placeholder="Last Name *"  required>
                                     <input type="text" name="address" placeholder="Address 1 *" required>
                                     <input type="text" name="zip" placeholder="Zip / Postal Code *" required>
-                                    <input type="text" name="phone" placeholder="Phone *">
+                                    <input type="text" name="phone" placeholder="Phone *"required>
                                     <button class="btn btn-default check_out" type="submit" name="submit" >Proceed To Payment</button>
                                 </form>
                             </div>

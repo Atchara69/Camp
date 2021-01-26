@@ -21,7 +21,7 @@
                         <div class="well text-center">
                             <form class="" action="/products/priceRange" method="get">
                                 {{-- {{csrf_field()}} --}}
-                                <input type="text" class="span2" value="" data-slider-min="500" data-slider-max="10000" data-slider-step="5" data-slider-value="[500,10000]" id="sl2" name="price"><br />
+                                <input type="text" class="span2" value="500,10000" data-slider-min="500" data-slider-max="10000" data-slider-step="5" data-slider-value="[500,10000]" id="sl2" name="price"><br />
                                 <b class="pull-left">500</b> <b class="pull-right">10,000</b>
                                 <input type="submit" name="" value="ค้นหา" class="btn btn-primary">
                             </form>

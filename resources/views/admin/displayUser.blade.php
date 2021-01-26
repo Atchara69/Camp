@@ -2,7 +2,7 @@
 @section('body')
 @if($users->count()>0)
 <div class="table-responsive">
-    <h2>Payments Panel</h2>
+    <h2>Uers</h2>
     <table class="table">
         <thead class="thead-dark">
           <tr>

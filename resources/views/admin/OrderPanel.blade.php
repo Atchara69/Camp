@@ -25,10 +25,10 @@
         <th scope="row">
             <span class="
             @if($order->status=='Not Paid')
-                    badge badge-success
-                    @else
                     badge badge-danger
-                    
+                    @else
+                  
+                      badge badge-success
                     @endif
 
             ">{{$order->status}}</span>

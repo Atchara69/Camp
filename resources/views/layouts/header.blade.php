@@ -14,7 +14,7 @@
 	  <link href="{{asset('css/main.css')}}" rel="stylesheet">
 	  <link href="{{asset('css/responsive.css')}}" rel="stylesheet">
 		{{-- Icon หน้า ShowProduct --}}
-	  <link rel="icon" href="{{asset('images/imges-camping/logo.png')}}" type="image/png"> 
+	  <link rel="icon" href="{{asset('images/imges-camping/logo.png')}}" type="image/png">
 </head><!--/head-->
 <body>
 	<header id="header"><!--header-->
@@ -54,7 +54,7 @@
                                             <span class="badge" style="background:red">{{$cartItems->totalQuantity}}</span>
                                         @endif
                                         <i class="fa fa-shopping-cart"></i>Cart</a></li>
-                                    <li><a href="checkout.html"><i class="fa fa-credit-card"></i> Checkout</a></li>
+                                    {{-- <li><a href="checkout.html"><i class="fa fa-credit-card"></i> Checkout</a></li> --}}
                                 @else
                                     <li><a href="/login"><i class="fa fa-lock"></i> Login</a></li>
                                     <li><a href="/register"><i class="fa fa-user"></i> Register</a></li>

@@ -22,7 +22,7 @@
         <tr>
         <th scope="row">{{$product->id}}</th>
             <td>
-                <img src="{{asset('images/product_image/'.$product->image)}}" alt="" width="150px" height="100px" >
+                <img src="{{asset('images/product_image/'.$product->image)}}" alt="" width="100px" height="100px" >
                 {{-- <img src="{{asset('storage/product_image/'.$product->image)}}" height="100" width="150"> --}}
             </td>
             <td>{{$product->name}}</td>

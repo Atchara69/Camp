@@ -31,7 +31,7 @@
                     @foreach($cartItems->items as $item)
                     <tr>
                         <td class="cart_product">
-                            <a href="/products/details/{{$item['data']['id']}}"><img src="{{asset('images')}}/product_image/{{$item['data']['image']}}" alt="" width="150px" height="90px"></a>
+                            <a href="/products/details/{{$item['data']['id']}}"><img src="{{asset('images')}}/product_image/{{$item['data']['image']}}" alt="" width="70px" height="70px"></a>
                         </td>
                         <td class="cart_description">
                             <h4><a href="/products/details/{{$item['data']['id']}}">{{$item['data']['name']}}</a></h4>

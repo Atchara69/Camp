@@ -69,7 +69,7 @@
                         <li>จำนวนสินค้า<span>{{$cartItems->totalQuantity}}</span></li>
                         <li>ราคารวม<span>{{number_format($cartItems->totalPrice)}}</span></li>
                     </ul>
-                        <a class="btn btn-default update" href="">Update</a>
+                        {{-- <a class="btn btn-default update" href="">Update</a> --}}
                         <a class="btn btn-default check_out" href="/products/checkout">Check Out</a>
                 </div>
             </div>
